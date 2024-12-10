@@ -29,9 +29,9 @@ export default function RootLayout({
       >
         <body>
           <NextThemeProvider>
-            <div className="flex min-h-screen items-center text-slate-100 w-full flex-col dark:bg-black">
+            <div className="flex min-h-screen items-center text-slate-100 w-full flex-col dark:bg-black ">
               <Navbar />
-              <div className="flex justify-center items-center w-full flex-grow">
+              <div className="flex justify-center items-center w-full flex-grow ">
                 {children}
                 <Toaster />
               </div>

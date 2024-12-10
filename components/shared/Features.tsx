@@ -9,33 +9,66 @@ const Features = () => {
     <>
       {/* Features Section */}
       <section id="features" className="py-20">
-        <div className="container">
+        <div className="max-w-7xl  mx-auto px-4 md:px-8">
+          <div className='flex justify-center'>
           <Badge className="mb-8">Solutions</Badge>
-          <h2 className="text-4xl font-bold mb-16 text-center">
+          </div>
+          {/* <h2 className="text-4xl font-bold mb-16 text-center">
             Solve your team&apos;s<br />biggest challenges
-          </h2>
-          <div className="relative">
-            <Card className="shadow-2xl bg-white overflow-hidden">
-              <CardContent className="p-8">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hQezBA5KNyS7YVDCZnYBYWnnsx9xmI.png"
-                  alt="Task Management Dashboard"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg shadow-lg w-full"
-                  priority
-                />
-              </CardContent>
-            </Card>
-            {/* Floating Feature Icon */}
-            <div className="absolute -right-8 top-1/2 transform -translate-y-1/2">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mfyAPvIF6caRonMe2rnrOfimUu3yZs.png"
-                alt="Verified"
-                width={64}
-                height={64}
-                className="rounded-xl shadow-lg"
-              />
+          </h2> */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Solve your team &apos;s biggest challenges</h2>
+            <p className="text-xl text-gray-500">Keep everything organized and boost productivity across your entire team.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <Image src="/assets/dashboard.avif" alt="Dashboard Screenshot" width={600} height={400} className="rounded-lg shadow-lg" />
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="bg-blue-100 p-2 rounded-full">
+                  <Image src="/icons/slack.png" alt="Collaboration Icon" width={24} height={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Seamless Collaboration</h3>
+                  <p className="text-gray-500">Work together effortlessly with your team, no matter where they are.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-green-100 p-2 rounded-full">
+                  <Image src="/icons/project-management.png" alt="Time Management Icon" width={24} height={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Time Management Tools</h3>
+                  <p className="text-gray-500">Track time, set deadlines, and optimize your workflow.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-purple-100 p-2 rounded-full">
+                  <Image src="/icons/analytics.png" alt="Analytics Icon" width={24} height={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Advanced task tracking</h3>
+                  <p className="text-gray-500">Get insights into your team&apos;s performance and project progress.</p>
+                </div>
+              </div>    <div className="flex items-start space-x-4">
+                <div className="bg-blue-100 p-2 rounded-full">
+                  <Image src="/icons/slack.png" alt="Collaboration Icon" width={24} height={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Seamless Collaboration</h3>
+                  <p className="text-gray-500">Work together effortlessly with your team, no matter where they are.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-green-100 p-2 rounded-full">
+                  <Image src="/icons/project-management.png" alt="Time Management Icon" width={24} height={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Time Management Tools</h3>
+                  <p className="text-gray-500">Track time, set deadlines, and optimize your workflow.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

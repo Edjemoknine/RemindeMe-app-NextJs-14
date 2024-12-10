@@ -38,7 +38,7 @@ const TaskCard = ({ task }: Props) => {
         }}
       />
       <label
-        htmlFor={task.id.toString}
+        htmlFor={task.content}
         className={cn(
           "text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 decoration-1 dark:decoration-white",
           task.done && "line-through"

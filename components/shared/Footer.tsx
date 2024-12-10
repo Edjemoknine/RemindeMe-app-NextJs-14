@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Logo from './Logo'
 
 const footerLinks = {
   Company: ['About Us', 'Contact', "What's New", 'Careers'],
@@ -19,22 +20,31 @@ const footerIcons = [
 
 export function Footer() {
   return (
-    <footer className="w-full py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <footer className="w-full py-20 relative overflow-hidden ">
+      <div className="max-w-7xl  mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between mb-12">
           <div className="mb-8 md:mb-0">
-            <div className="flex items-center mb-4">
-              <div className="mr-2 grid grid-cols-2 gap-1">
-                <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-                <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-                <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-                <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-              </div>
-              <span className="text-xl font-bold">ChronoTask</span>
-            </div>
-            <p className="text-gray-600 max-w-xs font-semibold text-lg">
+          <Logo size={2}/>
+            <p className="text-gray-600 max-w-xs font-semibold text-lg mt-4">
               Stay organized and<br />boost your productivity
             </p>
+          </div>
+          <div className='relative flex-1'>
+          {footerIcons.map((icon, index) => (
+          <div
+            key={index}
+            className="absolute"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+            }}
+          >
+            <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
+              <Image src={icon.src} alt={icon.alt} width={24} height={24} />
+            </div>
+          </div>
+        ))}
           </div>
           <div className="grid grid-cols-2 gap-8">
             {Object.entries(footerLinks).map(([category, links]) => (
@@ -53,21 +63,7 @@ export function Footer() {
             ))}
           </div>
         </div>
-        {footerIcons.map((icon, index) => (
-          <div
-            key={index}
-            className="absolute"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              transform: `rotate(${Math.random() * 360}deg)`,
-            }}
-          >
-            <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
-              <Image src={icon.src} alt={icon.alt} width={24} height={24} />
-            </div>
-          </div>
-        ))}
+      
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 mt-12 pt-8 border-t border-gray-200">
           <p>© 2024 ChronoTask. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
