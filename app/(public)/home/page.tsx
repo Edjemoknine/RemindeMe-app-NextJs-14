@@ -1,15 +1,14 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle } from 'lucide-react'
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
 
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
-     
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden ">
         <div className="container py-24 space-y-12">
           <div className="relative z-10 mx-auto max-w-3xl text-center space-y-8">
             <h1 className="text-5xl font-bold tracking-tight">
@@ -19,7 +18,10 @@ export default function LandingPage() {
             <p className="text-xl text-gray-500">
               Efficiently manage your tasks and boost productivity.
             </p>
-            <Button size="lg" className="h-12 px-8 bg-blue-600 hover:bg-blue-700">
+            <Button
+              size="lg"
+              className="h-12 px-8 bg-blue-600 hover:bg-blue-700"
+            >
               Get free demo
             </Button>
           </div>
@@ -61,39 +63,79 @@ export default function LandingPage() {
       <section className=" py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Solve your team &apos;s biggest challenges</h2>
-            <p className="text-xl text-gray-500">Keep everything organized and boost productivity across your entire team.</p>
+            <h2 className="text-3xl font-bold mb-4">
+              Solve your team &apos;s biggest challenges
+            </h2>
+            <p className="text-xl text-gray-500">
+              Keep everything organized and boost productivity across your
+              entire team.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <Image src="/assets/dashboard.avif" alt="Dashboard Screenshot" width={600} height={400} className="rounded-lg shadow-lg" />
+              <Image
+                src="/assets/dashboard.avif"
+                alt="Dashboard Screenshot"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
             </div>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-100 p-2 rounded-full">
-                  <Image src="/icons/slack.png" alt="Collaboration Icon" width={24} height={24} />
+                  <Image
+                    src="/icons/slack.png"
+                    alt="Collaboration Icon"
+                    width={24}
+                    height={24}
+                  />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Seamless Collaboration</h3>
-                  <p className="text-gray-500">Work together effortlessly with your team, no matter where they are.</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Seamless Collaboration
+                  </h3>
+                  <p className="text-gray-500">
+                    Work together effortlessly with your team, no matter where
+                    they are.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="bg-green-100 p-2 rounded-full">
-                  <Image src="/icons/project-management.png" alt="Time Management Icon" width={24} height={24} />
+                  <Image
+                    src="/icons/project-management.png"
+                    alt="Time Management Icon"
+                    width={24}
+                    height={24}
+                  />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Time Management Tools</h3>
-                  <p className="text-gray-500">Track time, set deadlines, and optimize your workflow.</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Time Management Tools
+                  </h3>
+                  <p className="text-gray-500">
+                    Track time, set deadlines, and optimize your workflow.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-100 p-2 rounded-full">
-                  <Image src="/icons/analytics.png" alt="Analytics Icon" width={24} height={24} />
+                  <Image
+                    src="/icons/analytics.png"
+                    alt="Analytics Icon"
+                    width={24}
+                    height={24}
+                  />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Advanced task tracking</h3>
-                  <p className="text-gray-500">Get insights into your team&apos;s performance and project progress.</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Advanced task tracking
+                  </h3>
+                  <p className="text-gray-500">
+                    Get insights into your team&apos;s performance and project
+                    progress.
+                  </p>
                 </div>
               </div>
             </div>
@@ -106,17 +148,26 @@ export default function LandingPage() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Simple pricing plans</h2>
-            <p className="text-xl text-gray-500">Choose the perfect plan for your team</p>
+            <p className="text-xl text-gray-500">
+              Choose the perfect plan for your team
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {pricingPlans.map((plan, i) => (
-              <Card key={i} className={i === 1 ? "border-blue-500 shadow-xl" : ""}>
+              <Card
+                key={i}
+                className={i === 1 ? "border-blue-500 shadow-xl" : ""}
+              >
                 <CardHeader>
                   <CardTitle>{plan.name}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 space-y-4">
                   <div className="text-3xl font-bold">${plan.price}/mo</div>
-                  <Button className={`w-full ${i === 1 ? "bg-blue-500 hover:bg-blue-600" : ""}`}>
+                  <Button
+                    className={`w-full ${
+                      i === 1 ? "bg-blue-500 hover:bg-blue-600" : ""
+                    }`}
+                  >
                     Get started
                   </Button>
                   <ul className="space-y-2">
@@ -138,7 +189,9 @@ export default function LandingPage() {
       <section id="integrations" className="py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Connect integrations you use every day</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Connect integrations you use every day
+            </h2>
           </div>
           <div className="grid grid-cols-4 md:grid-cols-7 gap-8 max-w-3xl mx-auto">
             {integrations.map((integration, i) => (
@@ -160,7 +213,9 @@ export default function LandingPage() {
       <section id="testimonials" className="py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">People just like you are already using ChronoTask</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              People just like you are already using ChronoTask
+            </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, i) => (
@@ -177,7 +232,9 @@ export default function LandingPage() {
                     />
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.title}</p>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.title}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -186,61 +243,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      {/* <footer className="bg-gray-900 text-white py-12">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <div className="col-span-2">
-              <Image src="/chronotask-logo-white.png" alt="ChronoTask Logo" width={32} height={32} className="mb-4" />
-              <p className="text-gray-400 mb-4">Stay organized and boost your productivity</p>
-              <div className="flex space-x-4">
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  <Image src="/icon-twitter.png" alt="Twitter" width={24} height={24} />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  <Image src="/icon-facebook.png" alt="Facebook" width={24} height={24} />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  <Image src="/icon-linkedin.png" alt="LinkedIn" width={24} height={24} />
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white">Features</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Solutions</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Integrations</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white">Blog</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Help Center</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Careers</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Contact Us</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white">About Us</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Press</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Investors</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white">Events</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2024 ChronoTask. All rights reserved.</p>
-          </div>
-        </div>
-      </footer> */}
     </div>
-  )
+  );
 }
 
 const pricingPlans = [
@@ -279,7 +283,7 @@ const pricingPlans = [
       "Custom integrations",
     ],
   },
-]
+];
 
 const integrations = [
   { name: "Google Drive", logo: "/icons/google-drive.png" },
@@ -297,26 +301,28 @@ const integrations = [
   { name: "Salesforce", logo: "/icons/salesforce.png" },
   { name: "WhatsApp", logo: "/icons/whatsapp.png" },
   { name: "Trello", logo: "/icons/trello.png" },
-]
+];
 
 const testimonials = [
   {
-    quote: "This task manager has completely transformed the way my team works. We now collaborate in real-time and always meet deadlines.",
+    quote:
+      "This task manager has completely transformed the way my team works. We now collaborate in real-time and always meet deadlines.",
     name: "Sarah Johnson",
     title: "Project Manager",
-    avatar: "/avatars/girl.webp"
+    avatar: "/avatars/girl.webp",
   },
   {
-    quote: "ChronoTask's intuitive interface makes it easy for me to organize my freelance projects and track my time efficiently.",
+    quote:
+      "ChronoTask's intuitive interface makes it easy for me to organize my freelance projects and track my time efficiently.",
     name: "Michael Chen",
     title: "Freelance Designer",
-    avatar: "/avatars/men.webp"
+    avatar: "/avatars/men.webp",
   },
   {
-    quote: "The analytics feature has given me valuable insights into our team's productivity. It's a game-changer for resource allocation.",
+    quote:
+      "The analytics feature has given me valuable insights into our team's productivity. It's a game-changer for resource allocation.",
     name: "Emily Rodriguez",
     title: "Operations Manager",
-    avatar: "/avatars/women.webp"
-  }
-]
-
+    avatar: "/avatars/women.webp",
+  },
+];
